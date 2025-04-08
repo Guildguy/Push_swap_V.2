@@ -23,7 +23,7 @@ int	main(int c, char *v[])
 		return (0);
 	else if (c == 2)
 		v = push_split(v[1], ' ');
-	populate_stack(&a, v + 1, c == 2);
+	populate_stack(&a, (v + !(c == 2)), c == 2);
 	if (!stack_done(a))
 	{
 		if (ft_lstsize(a) == 2)

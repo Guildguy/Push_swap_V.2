@@ -25,7 +25,7 @@ $(OBJ_DIR)%.o: $(FILE_DIR)%.c
 	$(CC) $(FLAGS) push_swap.h -c $< -o $@
 
 test: $(NAME)
-	$(eval ARG = $(shell shuf -i 0-1000 -n 100))
+	$(eval ARG = $(shell shuf -i 0-1000 -n 500))
 	./push_swap $(ARG) | ./checker_linux $(ARG)
 	@echo -n "Instructions: "
 	@./push_swap $(ARG) | wc -l

@@ -138,8 +138,8 @@ void	free_matrix(char *av[])
 	i = -1;
 	if (av == NULL || *av == NULL)
 		return ;
-	while (av[i])
-		free (av[i++]);
+	while (av[++i])
+		free (av[i]);
 	free(av);
 }
 
