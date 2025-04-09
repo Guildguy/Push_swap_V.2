@@ -19,7 +19,7 @@ int	main(int c, char *v[])
 
 	a = NULL;
 	b = NULL;
-	if (c == 1 || (c == 2 && !v[1][0]))
+	if (c == 1)
 		return (0);
 	else if (c == 2)
 		v = push_split(v[1], ' ');

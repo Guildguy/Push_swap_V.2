@@ -80,6 +80,8 @@ void	populate_stack(t_node **stack, char **ptr, bool array)
 	int		i;
 
 	i = 0;
+	if (!ptr[i])
+		error_handler(stack, ptr, array);
 	while (ptr[i])
 	{
 		if (!check_args(ptr[i]))
